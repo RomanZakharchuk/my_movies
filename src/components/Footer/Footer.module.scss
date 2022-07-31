@@ -1,0 +1,13 @@
+.footer {
+  min-height: 40px;
+  border-top: 1px solid #414141;
+  background: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  p {
+    margin-right: 20px;
+  }
+
+}

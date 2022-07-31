@@ -1,0 +1,14 @@
+.btn {
+  margin: 8px 0 0 10px;
+  background: #383838;
+  font-size: 14px;
+  color: white;
+  padding: 0 10px;
+  line-height: 26px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: #561857;
+  }
+}

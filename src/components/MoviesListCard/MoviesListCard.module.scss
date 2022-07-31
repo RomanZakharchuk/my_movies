@@ -1,0 +1,27 @@
+.card {
+  width: 235px;
+  min-height: 250px;
+  background: #f1f1f1;
+  border: 1px solid #e5e5e5;
+  margin: 10px auto;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  &:hover {
+    background: none;
+  }
+
+
+}
+
+.card__img {
+  text-align: center;
+  img {
+    width: 100%;
+    padding: 1px;
+  }
+}
+

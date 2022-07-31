@@ -1,0 +1,23 @@
+.sidebar {
+  width: 100%;
+  max-width: 260px;
+  min-height: 100vh;
+  padding-right: 10px;
+  background: #FFFFFFFF;
+
+  .title_wrap {
+    padding: 14px 0 14px 18px;
+    background: #561857;
+
+    h2 {
+      color: white;
+      font-size: 24px;
+    }
+  }
+
+  .btn_group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+

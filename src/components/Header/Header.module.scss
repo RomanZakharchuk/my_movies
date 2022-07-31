@@ -1,0 +1,28 @@
+.header {
+  min-height: 100px;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,5,136,1) 51%, rgba(2,0,36,1) 100%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  margin: 12px 0;
+
+  h1 {
+    color: white;
+    font-size: 48px;
+  }
+
+  span {
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    border-top: 3px dashed white;
+    border-bottom: 3px dashed white;
+    text-transform: uppercase;
+  }
+}
+
