@@ -1,6 +1,10 @@
-const PosterPreview = () => {
+import {IMAGE_PATH} from "../../constats";
+
+const PosterPreview = ({bgPath, title}) => {
     return (
-        <div>PosterPreview</div>
+        <div>
+            <img src={IMAGE_PATH + bgPath} alt={title}/>
+        </div>
     )
 }
 

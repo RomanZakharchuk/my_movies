@@ -7,7 +7,8 @@ const initialState = {
     movies: [],
     errors: null,
     selectedGenre: null,
-    numberPage: null
+    numberPage: null,
+    infoAboutMovie: []
 };
 
 const getCategories = createAsyncThunk(
@@ -43,6 +44,18 @@ const getMovieGenres = createAsyncThunk(
     }
 );
 
+const getAllAboutMovie = createAsyncThunk(
+    'movieSlice/getAllAboutMovie',
+    async (id, {rejectWithValue}) => {
+        try {
+            const {data} = await moviesService.getMovieId(id);
+            return data;
+        } catch (e) {
+            return rejectWithValue(e.response.data)
+        }
+    }
+);
+
 const movieSlice = createSlice({
     name: 'movieSlice',
     initialState,
@@ -62,6 +75,9 @@ const movieSlice = createSlice({
             .addCase(getMovieGenres.fulfilled, (state, action) => {
                 state.movies = action.payload
             })
+            .addCase(getAllAboutMovie.fulfilled, (state, action) => {
+                state.infoAboutMovie = action.payload
+            })
             .addDefaultCase((state, action) => {
                 const [type] = action.type.split('/').splice(-1);
 
@@ -80,7 +96,8 @@ const movieActive = {
     getCategories,
     getMovieGenres,
     getSelectedGenre,
-    getNumPage
+    getNumPage,
+    getAllAboutMovie
 }
 
 export {
