@@ -3,7 +3,7 @@
   max-width: 260px;
   min-height: 100vh;
   padding-right: 10px;
-  background: #FFFFFFFF;
+  background: var(--background-color);
 
   .title_wrap {
     padding: 14px 0 14px 18px;

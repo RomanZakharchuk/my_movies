@@ -30,7 +30,7 @@ const MoviesListCards = () => {
   };
 
   return (
-    <div>
+    <div className={style.movie_list_cards}>
       <div className={style.list_cards}>
         {movies.map((movie, index) => (
           <MoviesListCard key={index} movie={movie} />

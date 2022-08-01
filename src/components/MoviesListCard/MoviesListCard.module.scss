@@ -1,7 +1,6 @@
 .card {
-  width: 235px;
   min-height: 250px;
-  background: #f1f1f1;
+  background: var(--background-color-card);
   border: 1px solid #e5e5e5;
   margin: 10px auto;
   cursor: pointer;
@@ -22,6 +21,10 @@
   img {
     width: 100%;
     padding: 1px;
+  }
+
+  p {
+    color: var(--color-card);
   }
 }
 

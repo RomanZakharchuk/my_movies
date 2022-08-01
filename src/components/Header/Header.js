@@ -1,6 +1,17 @@
 import style from './Header.module.scss';
+import {useTheme} from "../../hooks";
+
 
 const Header = () => {
+    const {theme, setTheme} = useTheme();
+
+    const handleLightThemeClick = () => {
+        setTheme('light');
+    };
+
+    const handleDarkThemeClick = () => {
+        setTheme('dark');
+    }
 
     return (
         <div className={style.header}>
@@ -10,6 +21,11 @@ const Header = () => {
                     <span>online in hd quality</span>
                 </div>
             </a>
+
+            <div className={style.btn_group}>
+                <button onClick={handleLightThemeClick}>Light</button>
+                <button onClick={handleDarkThemeClick}>Dark</button>
+            </div>
         </div>
     )
 }
