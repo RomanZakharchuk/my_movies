@@ -1,15 +1,16 @@
 import {useParams} from "react-router-dom";
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
+import {Badge} from "@mui/material";
 
 import style from './MovieInfo.module.scss';
 import {movieActive} from "../../redux/slices";
-import {PosterPreview, StarsRating} from "../../components";
+import {PosterPreview} from "../../components";
 import {IMAGE_PATH} from "../../constats";
 
 const MovieInfo = () => {
     const {id} = useParams();
-    const {infoAboutMovie} = useSelector(state => state.movies)
+    const {infoAboutMovie} = useSelector(state => state.movies);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -27,30 +28,33 @@ const MovieInfo = () => {
 
     return (
         <div className={style.movie_info}>
-            <div>
+            <div className={style.movie_info__title}>
                 <h2>{original_title}</h2>
             </div>
 
             <div className={style.wrap_info}>
-                <div className={style.wrap_info__img}>
-                    <img src={IMAGE_PATH + poster_path} alt={original_title}/>
-                </div>
-
+                <Badge
+                    badgeContent={vote_average}
+                    color='secondary'>
+                    <div className={style.wrap_info__img}>
+                        <img src={IMAGE_PATH + poster_path} alt={original_title}/>
+                    </div>
+                </Badge>
                 <div className={style.wrap_info__text}>
                     <div>
-                        <h3>Name:</h3>
+                        <h4>Name:</h4>
                         <p>{original_title}</p>
                     </div>
 
                     <div>
-                        <h3>Data:</h3>
+                        <h4>Data:</h4>
                         <p>{release_date}</p>
                     </div>
 
                 </div>
             </div>
 
-            <div className='opys'>
+            <div className={style.movie_info__overview}>
                 <p>{overview}</p>
             </div>
 
@@ -58,8 +62,6 @@ const MovieInfo = () => {
                 bgPath={backdrop_path}
                 title={original_title}
             />
-
-            <StarsRating average={vote_average}/>
         </div>
     )
 }
