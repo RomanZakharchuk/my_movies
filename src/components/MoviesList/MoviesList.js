@@ -1,14 +1,17 @@
 import style from './MoviesList.module.scss';
 import {MoviesListCards} from "../../components";
 
+
 const MoviesList = () => {
     return (
         <div className={style.content}>
-            <div className={style.head}>
-                <h2>Movie online</h2>
-            </div>
+            <div>
+                <div className={style.head}>
+                    <h2>Movie online</h2>
+                </div>
 
-            <MoviesListCards/>
+                <MoviesListCards/>
+            </div>
         </div>
     )
 }

@@ -1,3 +1,5 @@
+import {Badge} from "@mui/material";
+
 import style from './MoviesListCard.module.scss';
 import {StarsRating} from "../../components";
 import {IMAGE_PATH} from "../../constats";
@@ -13,12 +15,17 @@ const MoviesListCard = ({movie}) => {
 
     return (
         <div className={style.card}>
-            <div className={style.card__img}>
-                <img src={IMAGE_PATH + poster_path} alt={title}/>
-                <div>
-                    <a href="/">{original_title}</a>
+            <Badge
+                badgeContent={vote_average}
+                color='secondary'>
+
+                <div className={style.card__img}>
+                    <img src={IMAGE_PATH + poster_path} alt={title}/>
+                    <div>
+                        <a href="/">{original_title}</a>
+                    </div>
                 </div>
-            </div>
+            </Badge>
 
             <div>
                 <StarsRating average={vote_average}/>

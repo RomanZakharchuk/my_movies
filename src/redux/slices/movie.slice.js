@@ -6,7 +6,8 @@ const initialState = {
     categories: [],
     movies: [],
     errors: null,
-    selectedGenreId: null
+    selectedGenreId: null,
+    numberPage: null
 };
 
 const getCategories = createAsyncThunk(
@@ -25,16 +26,17 @@ const getMovieGenres = createAsyncThunk(
     'movieSlice/getMovieGenres',
     async (input, {rejectWithValue}) => {
         try {
+
             if (!input) {
                 // initial start
                 const {data} = await moviesService.getMovies(1);
                 return data.results
             }
 
-            const {selectedCategoryId, page} = input;
 
-            const {data} = await moviesService.getMoviesWithGenres(selectedCategoryId, page || 1);
+            let {selectedCategoryId, numberPage} = input;
 
+            const {data} = await moviesService.getMoviesWithGenres(selectedCategoryId, numberPage);
             return data.results
         } catch (e) {
             return rejectWithValue(e.response.data)
@@ -48,6 +50,9 @@ const movieSlice = createSlice({
     reducers: {
         getSelectedGenre: (state, action) => {
             state.selectedGenreId = action.payload
+        },
+        getNumPage: (state, action) => {
+            state.numberPage = action.payload
         }
     },
     extraReducers: (builder) =>
@@ -56,6 +61,9 @@ const movieSlice = createSlice({
                 state.categories = action.payload
             })
             .addCase(getMovieGenres.fulfilled, (state, action) => {
+                console.log({
+                    eR: action.payload
+                })
                 state.movies = action.payload
             })
             .addDefaultCase((state, action) => {
@@ -69,12 +77,13 @@ const movieSlice = createSlice({
             })
 });
 
-const {reducer: movieReducer, actions: {getSelectedGenre}} = movieSlice;
+const {reducer: movieReducer, actions: {getSelectedGenre, getNumPage}} = movieSlice;
 
 const movieActive = {
     getCategories,
     getMovieGenres,
-    getSelectedGenre
+    getSelectedGenre,
+    getNumPage
 }
 
 export {
