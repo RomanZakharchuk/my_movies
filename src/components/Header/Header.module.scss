@@ -1,8 +1,8 @@
 .header {
   min-height: 100px;
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,5,136,1) 51%, rgba(2,0,36,1) 100%);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(0, 5, 136, 1) 51%, rgba(2, 0, 36, 1) 100%);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
   a {
@@ -13,7 +13,7 @@
 .title {
   display: flex;
   flex-direction: column;
-  margin: 12px 0;
+  margin: 12px 0 12px 200px;
 
   h1 {
     color: white;
@@ -32,16 +32,22 @@
 
 .btn_group {
   button {
-    background: #1899d6;
-    border-radius: 16px;
+    //background: #1899d6;
+    //border-radius: 16px;
+    border: none;
+    background: none;
     color: #ffffff;
     cursor: pointer;
-    display: inline-block;
+    //display: inline-block;
     font-size: 12px;
     outline: none;
     text-align: center;
-    padding: 10px 16px;
-    margin: 2px;
+    padding: 0 12px;
+  }
+
+  span {
+    height: 100%;
+    border-left: 1px solid white;
   }
 }
 

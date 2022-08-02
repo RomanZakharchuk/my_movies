@@ -17,7 +17,7 @@ const MoviesListCard = ({movie}) => {
 
     return (
         <div className={style.card}>
-            <Link to={`/${id}`}>
+            <Link className={style.link} to={`/${id}`}>
                 <Badge
                     badgeContent={vote_average}
                     color='secondary'>

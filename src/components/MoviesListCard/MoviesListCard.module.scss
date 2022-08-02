@@ -1,8 +1,8 @@
 .card {
   min-height: 250px;
-  background: var(--background-color-card);
-  border: 1px solid #e5e5e5;
-  margin: 10px auto;
+  background: var(--background-color);
+  border: var(--border-color);
+  margin: 10px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -12,8 +12,11 @@
   &:hover {
     background: none;
   }
+}
 
-
+.link {
+  color: var(--color-card);
+  text-decoration: none;
 }
 
 .card__img {

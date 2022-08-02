@@ -24,6 +24,7 @@ const Header = () => {
 
             <div className={style.btn_group}>
                 <button onClick={handleLightThemeClick}>Light</button>
+                <span></span>
                 <button onClick={handleDarkThemeClick}>Dark</button>
             </div>
         </div>

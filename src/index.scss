@@ -26,15 +26,17 @@ code {
 }
 
 html[data-theme='dark'] {
-  --background-color: aquamarine;
-  --color: crimson;
-  --background-color-card: #002aff;
-  --color-card: red;
+  --background-color: #313735;
+  --color: white;
+  --color-card: white;
+  --border-color: 1px solid #4d4c4c;
+  --background-color-btn: #6f7084;
 }
 
 html[data-theme='light'] {
   --background-color: #f6f6f6;
   --color: black;
-  --background-color-card: #f1f1f1;
   --color-card: black;
+  --border-color: 1px solid #e5e5e5;
+  --background-color-btn: #383838;
 }
