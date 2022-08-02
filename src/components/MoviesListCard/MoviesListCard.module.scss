@@ -1,13 +1,8 @@
 .card {
-  min-height: 250px;
   background: var(--background-color);
   border: var(--border-color);
-  margin: 10px;
+  margin: 5px 6px;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
 
   &:hover {
     background: none;
@@ -15,8 +10,12 @@
 }
 
 .link {
+  min-height: 480px;
   color: var(--color-card);
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card__img {
@@ -29,5 +28,9 @@
   p {
     color: var(--color-card);
   }
+}
+
+.star_wrap {
+  padding: 0 5px 5px 5px;
 }
 

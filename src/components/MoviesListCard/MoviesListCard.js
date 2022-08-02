@@ -18,19 +18,21 @@ const MoviesListCard = ({movie}) => {
     return (
         <div className={style.card}>
             <Link className={style.link} to={`/${id}`}>
-                <Badge
-                    badgeContent={vote_average}
-                    color='secondary'>
-
-                    <div className={style.card__img}>
-                        <img src={IMAGE_PATH + poster_path} alt={title}/>
-                        <div>
-                            <p>{original_title}</p>
-                        </div>
-                    </div>
-                </Badge>
-
                 <div>
+                    <Badge
+                        badgeContent={vote_average.toFixed(1)}
+                        color='secondary'>
+
+                        <div className={style.card__img}>
+                            <img src={IMAGE_PATH + poster_path} alt={title}/>
+                            <div>
+                                <p>{original_title}</p>
+                            </div>
+                        </div>
+                    </Badge>
+                </div>
+
+                <div className={style.star_wrap}>
                     <StarsRating average={vote_average}/>
                     <p>{release_date}</p>
                 </div>

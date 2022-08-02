@@ -13,7 +13,7 @@
 .title {
   display: flex;
   flex-direction: column;
-  margin: 12px 0 12px 200px;
+  margin: 12px 0 12px 10px;
 
   h1 {
     color: white;
@@ -39,13 +39,10 @@
 
 .btn_group {
   button {
-    //background: #1899d6;
-    //border-radius: 16px;
     border: none;
     background: none;
     color: #ffffff;
     cursor: pointer;
-    //display: inline-block;
     font-size: 12px;
     outline: none;
     text-align: center;

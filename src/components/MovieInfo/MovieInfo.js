@@ -27,8 +27,6 @@ const MovieInfo = () => {
         vote_average
     } = infoAboutMovie;
 
-    console.log(infoAboutMovie)
-
     return (
         <div className={style.movie_info}>
             <div className={style.movie_info__title}>
