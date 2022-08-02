@@ -1,9 +1,10 @@
 import style from './Header.module.scss';
 import {useTheme} from "../../hooks";
+import {UserInfo} from "../UserInfo/UserInfo";
 
 
 const Header = () => {
-    const {theme, setTheme} = useTheme();
+    const {setTheme} = useTheme();
 
     const handleLightThemeClick = () => {
         setTheme('light');
@@ -22,10 +23,13 @@ const Header = () => {
                 </div>
             </a>
 
-            <div className={style.btn_group}>
-                <button onClick={handleLightThemeClick}>Light</button>
-                <span></span>
-                <button onClick={handleDarkThemeClick}>Dark</button>
+            <div className={style.wrap}>
+                <div className={style.btn_group}>
+                    <button onClick={handleLightThemeClick}>Light</button>
+                    <span></span>
+                    <button onClick={handleDarkThemeClick}>Dark</button>
+                </div>
+                <UserInfo/>
             </div>
         </div>
     )

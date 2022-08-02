@@ -30,6 +30,13 @@
   }
 }
 
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
+}
+
 .btn_group {
   button {
     //background: #1899d6;

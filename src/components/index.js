@@ -8,3 +8,4 @@ export * from './StarsRating/StarsRating';
 export * from './Footer/Footer';
 export * from './Sidebar/Sidebar';
 export * from './SidebarCategory/SidebarCategory';
+export * from './UserInfo/UserInfo';

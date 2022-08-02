@@ -12,7 +12,7 @@ const MoviesListCards = () => {
 
   const { movies } = useSelector((state) => state.movies);
   const { selectedGenre } = useSelector((state) => state.movies);
-  const { numberPage } = useSelector((state) => state.movies);
+  // const { numberPage } = useSelector((state) => state.movies);
   const dispatch = useDispatch();
 
   useEffect(() => {

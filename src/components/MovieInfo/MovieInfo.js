@@ -21,10 +21,13 @@ const MovieInfo = () => {
         backdrop_path,
         original_title,
         overview,
+        tagline,
         poster_path,
         release_date,
         vote_average
     } = infoAboutMovie;
+
+    console.log(infoAboutMovie)
 
     return (
         <div className={style.movie_info}>
@@ -51,6 +54,7 @@ const MovieInfo = () => {
                         <p>{release_date}</p>
                     </div>
 
+                    <h4>{tagline}</h4>
                 </div>
             </div>
 
