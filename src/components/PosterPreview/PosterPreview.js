@@ -1,11 +1,11 @@
 import style from './PosterPreview.module.scss';
 
-import {IMAGE_PATH} from "../../constats";
+import {IMAGE_PATH, img} from "../../constats";
 
 const PosterPreview = ({bgPath, title}) => {
     return (
         <div className={style.poster}>
-            <img src={IMAGE_PATH + bgPath} alt={title}/>
+            <img src={bgPath? IMAGE_PATH + bgPath: img} alt={title}/>
         </div>
     )
 }
